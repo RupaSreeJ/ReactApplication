@@ -36,7 +36,7 @@ export class Addtodo extends Component {
     <form align="center">
     <label htmlFor="content"></label>
     <AddtodoInput placeholder={this.props.placeholder} content={this.state.content} handleChange={this.handleChange} />
-     <TodoButton onClick={this.submitData} name={this.props.add} />
+     <TodoButton id="submit-click" onClick={this.submitData} name={this.props.add} />
      </form>
      <div>
      <ListEdit data={this.state.data} />
