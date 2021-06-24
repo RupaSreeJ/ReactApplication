@@ -7,6 +7,7 @@ class TodoButton extends Component {
     render() {
         return (
             <button className="btn btn-primary"
+                    id={this.props.id}
                 onClick={this.props.onClick}>
                 {this.props.name}
             </button>
