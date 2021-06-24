@@ -50,8 +50,8 @@ class ListEdit extends Component {
           <td>{item.name}</td>
           <td>
             <div data-toggle="modal" data-target="#exampleModal" >
-              <TodoButton onClick={() => this.replaceModalItem(item)} name={this.props.edit} /> </div>
-            <TodoButton className="btn btn-danger" onClick={() => this.deleteItem(item)} name={this.props.delete} />
+              <TodoButton id="edit" onClick={() => this.replaceModalItem(item)} name={this.props.edit} /> </div>
+            <TodoButton  id="delete" className="btn btn-danger" onClick={() => this.deleteItem(item)} name={this.props.delete} />
           </td>
         </tr>
       )
