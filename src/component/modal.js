@@ -10,11 +10,6 @@ class Modal extends Component {
       key: props.key,
         }
     }
-    UNSAFE_componentWillReceiveProps(nextProps) {
-      this.setState({                          //set the state based on properties,it is react event this will receive next propeties
-      title: nextProps.title,          //i.e., going to received component,every time we will receive new propertie(by nextprops) will reset the state 
-        });
-    }
     titleHandler(e) {
       this.setState({ title: e.target.value });
     }
@@ -38,11 +33,11 @@ class Modal extends Component {
          </button>
          </div>
         <div className="modal-body">
-         <p><span className="modal-lable">Title:</span><input value={this.state.title} onChange={(e) => this.titleHandler(e)} /></p>
+         <p><span className="modal-lable">Title:</span><input id="edititem" value={this.state.title} onChange={(e) => this.titleHandler(e)} /></p>
           </div>
          <div className="modal-footer" data-dismiss="modal" type="button" >
          <TodoButton className="btn btn-primary" name={this.props.cancel} />
-         <TodoButton className="btn btn-primary" onClick={() => { this.handleSave() }} name={this.props.ok} />
+         <TodoButton id="ok" className="btn btn-primary" onClick={() => { this.handleSave() }} name={this.props.ok} />
           </div>
            </div>
            </div>
