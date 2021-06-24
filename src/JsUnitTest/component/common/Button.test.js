@@ -4,10 +4,10 @@ import TodoButton from '../../../component/common/Button';
 import sinon from "sinon";
 describe("TodoButton" , () =>{
     it(" Testing Button click event",() => {
-        const mockCallBack = sinon.spy();
-        const button = shallow((<TodoButton onClick={mockCallBack}>ok</TodoButton>));
+        const buttonClick = sinon.spy();
+        const button = shallow((<TodoButton onClick={buttonClick}>ok</TodoButton>));
         button.find('button').simulate('click');
-        expect(mockCallBack).toHaveProperty('callCount',1);
+        expect(buttonClick.calledOnce).toBe(true);
     });
 });
 
